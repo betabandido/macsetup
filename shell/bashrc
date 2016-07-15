@@ -1,0 +1,24 @@
+# TODO add HOMEBREW_GITHUB_API_TOKEN
+
+export CLICOLOR=1 # for dircolors
+export EDITOR="vim"
+export PS1="[\u@\h:\w]$ "
+
+if [ -d ${HOME}/bin ]; then
+	PATH=${PATH}:${HOME}/bin
+fi
+
+PATH="/usr/local/bin:/usr/local/sbin:${PATH}" # for homebrew
+export PATH
+
+test -e ~/.dircolors && \
+	eval $(gdircolors -b ~/.dircolors)
+
+alias ls="gls --color=auto"
+alias cgrep="grep --color=always"
+alias less="less -R"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+

@@ -1,0 +1,4 @@
+if [ "${BASH-no}" != "no" ]; then
+	[ -r ${HOME}/.bashrc ] && . ${HOME}/.bashrc
+fi
+
