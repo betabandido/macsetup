@@ -1,0 +1,29 @@
+"Plug-in management (see https://github.com/junegunn/vim-plug)
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'scons.vim'
+call plug#end()
+
+"Indentation
+filetype indent on
+set smartindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
+syntax enable
+
+set background=dark
+colorscheme solarized
+
+"Make up and down keys work within a paragraph
+noremap <Up> gk
+noremap <Down> gj
+
+"Sane behavior for backspace
+set backspace=indent,eol,start
+
+set hlsearch
+set nu
+set ruler
+
